@@ -1,0 +1,35 @@
+{
+  "name": "daw-app",
+  "version": "1.0.0",
+  "description": "Dead Action Worm Webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonYe4273/daw-app.git"
+  },
+  "author": "Jason Ye, Josh Brunner, Ixa Gani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonYe4273/daw-app/issues"
+  },
+  "homepage": "https://github.com/JasonYe4273/daw-app#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.8.0",
+    "express": "^4.17.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6"
+  }
+}
