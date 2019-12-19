@@ -1,15 +1,13 @@
-To setup things, first install node/npm, then run:
+To setup things, first install node/npm, then, in both the client and server folders, run:
 
 `$ npm install`
 
-To run the server, run:
+To run the React server (on port 3000), run:
 
-`$ node index.js`
+`$ npm start`
 
-To run the server, and have it update when files change, first install Nodemon:
+in the client folder. This server provides the UI code, and sends requests to the Express server for backend, database-related things.
 
-`$ sudo npm install -g nodemon`
+Do the same in the server folder to run the Express server (on port 8000). This server handles backend.
 
-Then run:
-
-`$ nodemon index.js`
+Whenever you edit code, the respective server will restart to reflect your changes.

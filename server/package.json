@@ -1,9 +1,10 @@
 {
   "name": "daw-app",
   "version": "1.0.0",
-  "description": "Dead Action Worm Webapp",
+  "description": "Dead Action Worm Webapp Server",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,19 +18,17 @@
   },
   "homepage": "https://github.com/JasonYe4273/daw-app#readme",
   "dependencies": {
-    "@material-ui/core": "^4.8.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-redux": "^7.1.3",
-    "react-router": "^5.1.2",
-    "react-router-redux": "^4.0.8",
-    "redux": "^4.0.4",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "http-errors": "^1.7.3",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6"
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "nodemon": "^2.0.2"
   }
 }
