@@ -2,12 +2,16 @@ To setup things, first install node/npm, then, in both the client and server fol
 
 `$ npm install`
 
-To run the React server (on port 3000), run:
+To compile the client code, run:
 
 `$ npm start`
 
-in the client folder. This server provides the UI code, and sends requests to the Express server for backend, database-related things.
+in the client folder. This compiles the UI code, bundles it up with Webpack, and stores it in public/app.js.
 
-Do the same in the server folder to run the Express server (on port 8000). This server handles backend.
+To run the server, run:
 
-Whenever you edit code, the respective server will restart to reflect your changes.
+`$ npm start`
+
+in the server folder. This will run the server on port 8000, which will serve the files bundled into public/app.js with Webpack, and respond to requests from the client.
+
+Whenever you edit client code, Webpack will automatically recompile it. Similarly, whenever you edit server code, the server will restart to reflect the changes.

@@ -15,11 +15,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('../public'));
 
 // app.use('/', indexRouter);
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(__dirname, '../public/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => next(createError(404)));
@@ -31,8 +33,7 @@ app.use((err, req, res, next) => {
 	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
 	// render the error page
-	res.status(err.status || 500);
-	res.render('error');
+	res.status(err.status || 500).end();
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Dead Action Worm app listening on port ${port}!`));

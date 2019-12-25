@@ -13,7 +13,9 @@ class App extends Component {
 		return (
 			<Provider store={store}>
 				<ConnectedRouter history={browserHistory}>
-					<AppRouter />
+					<div>
+						<Route path="/" component={AppRouter}/>
+					</div>
 				</ConnectedRouter>
 			</Provider>
 		);

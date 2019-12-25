@@ -1,39 +1,32 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const path = require('path');
+const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
-	module: {
-		rules: [
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader"
-				}
-			},
-			{
-				test: /\.html$/,
-				use: [
-					{
-						loader: "html-loader"
-					}
-				]
-			}
-		]
-	},
-	entry: './src/index.js',
-	output: {
-		path: path.resolve(__dirname, 'public'),
-		filename: 'app.js'
-	},
-	devServer: {
-		publicPath: '/',
-		contentBase: './public',
-		hot: true
-	},
-	plugins: [
-		new HtmlWebPackPlugin({
-			template: "./src/index.html"
-		})
-	]
+    entry: path.join(__dirname, "src", "index.js"),
+    module: {
+        rules: [
+          {
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            use: {
+              loader: "babel-loader"
+            }
+          }
+        ]
+    },
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },
+    output: {
+        path: path.resolve(__dirname, "../public"),
+        filename: "app.js",
+        publicPath: "/"
+    }, 
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devServer: {
+        hot: true,
+        historyApiFallback: true
+    }
 };
