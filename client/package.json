@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@material-ui/core": "^4.8.1",
     "connected-react-router": "^6.6.1",
     "history": "^4.10.1",
+    "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -16,7 +19,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
@@ -24,7 +29,7 @@
     "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "start": "nodemon --exec webpack --mode development",
+    "start": "nodemon -e js,jsx -w src --exec 'webpack --mode development'",
     "build": "webpack --mode production"
   }
 }

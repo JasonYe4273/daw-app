@@ -14,4 +14,4 @@ To run the server, run:
 
 in the server folder. This will run the server on port 8000, which will serve the files bundled into public/app.js with Webpack, and respond to requests from the client.
 
-Whenever you edit client code, Webpack will automatically recompile it. Similarly, whenever you edit server code, the server will restart to reflect the changes.
+Whenever you edit client code, Webpack will automatically recompile it. Similarly, whenever you edit server code, the server will restart to reflect the changes. You can also manually restart by typing `rs` in the terminal.

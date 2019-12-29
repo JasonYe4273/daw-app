@@ -18,8 +18,7 @@ const store = createStore(
 		success: {
 			show: false,
 			text: 'Success!'
-		},
-		forms: {}
+		}
 	},
 	compose(
 		applyMiddleware(

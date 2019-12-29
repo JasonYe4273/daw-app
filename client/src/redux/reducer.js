@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router'
 
 import inSession from './reducers/inSession.js';
-import forms from './reducers/forms.js';
 import fetching from './reducers/fetching.js';
 import success from './reducers/success.js';
 
@@ -11,8 +10,7 @@ const createRootReducer = (history) => combineReducers({
 	router: connectRouter(history),
 	inSession,
 	fetching,
-	success,
-	forms
+	success
 });
 
 export default createRootReducer;

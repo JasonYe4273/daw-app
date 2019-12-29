@@ -10,19 +10,6 @@ export const types = {
 
 	CREATE_ACCOUNT: 'Create Account',
 
-	CREATE_FORM: 'Create Form',
-	REFRESH_FORM: 'Refresh Form',
-	CLEAR_FORM: 'Clear Form',
-	MOVE_FORM: 'Move Form',
-	COPY_FORM: 'Copy Form',
-	MERGE_FORM: 'Merge Form',
-	FORM_LOADED: 'Form Loaded',
-	SEND_FORM_VAR: 'Send Form Variable',
-	SEND_FORM_VARS: 'Send Form Variables',
-	SEND_FORM_ERR: 'Send Form Error',
-	START_FORM_CHECK: 'Start Form Check',
-	END_FORM_CHECK: 'End Form Check',
-
 	INIT_USER_INFO: 'Initialize User Info',
 	UPDATE_USER_INFO: 'Update User Info',
 

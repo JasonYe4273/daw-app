@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 import { push } from 'connected-react-router';
 
-import EditAccount from './EditAccount.js';
-import AccountSettings from './AccountSettings.js';
-import Home from './Home.js'
-import Login from './Login.js'
-import CreateAccount from './CreateAccount.js'
+import EditAccount from './EditAccount.jsx';
+import AccountSettings from './AccountSettings.jsx';
+import Home from './Home.jsx';
+import Login from './Login.jsx';
+import CreateAccount from './CreateAccount.jsx';
 
 const style = {
 	content: {
