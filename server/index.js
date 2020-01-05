@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 
-// var indexRouter = require('./routes/index');
+import router from './router/api.js';
 
 var app = express();
 var port = 8000;
@@ -17,9 +17,11 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static('../public'));
 
-// app.use('/', indexRouter);
+// Server requests should all start with /api
+app.use('/api', router);
 
-app.get('*', (req, res) => {
+// All other requests should be for loading webpages
+app.get(/^\/(?!api)/, (req, res) => {
 	res.sendFile(path.resolve(__dirname, '../public/index.html'));
 });
 
@@ -34,6 +36,11 @@ app.use((err, req, res, next) => {
 
 	// render the error page
 	res.status(err.status || 500).end();
+});
+
+// make sure all responses are ended
+app.use((request, response) => {
+	response.end();
 });
 
 app.listen(port, () => console.log(`Dead Action Worm app listening on port ${port}!`));
